@@ -1,0 +1,12 @@
+api:
+  container_name: camembert_api
+  build: .
+  ports:
+    - 80:80
+  links:
+    - mongo
+
+mongo:
+  container_name: camembert_mongo
+  build: mongo/.
+  command: mongod --smallfiles --quiet --logpath=/dev/null --dbpath=/data/db
