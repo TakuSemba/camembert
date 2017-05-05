@@ -12,7 +12,11 @@ func GetJsonPrefectures(c echo.Context) error {
 
 	prefectures, _ := models.GetPrefectures()
 
-	return c.JSON(http.StatusOK, prefectures)
+	data := models.Prefectures{
+		Prefectures: prefectures,
+	}
+
+	return c.JSON(http.StatusOK, data)
 }
 
 func GetBinaryPrefectures(c echo.Context) error {

@@ -15,8 +15,8 @@ func ToGetPrefecturesResponse(prefectures []models.Prefecture) (res proto.GetPre
 
 func ToPrefectures(prefectures []models.Prefecture) (res []*proto.Prefecture) {
 	for _, pref := range prefectures {
-		chProto := ToPrefecture(&pref)
-		res = append(res, &chProto)
+		prefProto := ToPrefecture(&pref)
+		res = append(res, &prefProto)
 	}
 	return
 }

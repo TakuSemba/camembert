@@ -8,6 +8,10 @@ type Prefecture struct {
 	Romaji   string      `json:"romaji"`
 }
 
+type Prefectures struct {
+	Prefectures 	[]Prefecture   `json:"prefectures"`
+}
+
 func GetPrefectures() (prefectures []Prefecture, err error) {
 	session := GetSession()
 	defer session.Close()
