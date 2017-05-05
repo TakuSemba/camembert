@@ -9,6 +9,10 @@
 			"Rev": "2268707a8f0843315e2004ee4f1d021dc08baedf"
 		},
 		{
+			"ImportPath": "github.com/golang/protobuf/proto",
+			"Rev": "18c9bb3261723cd5401db4d0c9fbc5c3b6c70fe8"
+		},
+		{
 			"ImportPath": "github.com/labstack/echo",
 			"Comment": "v3.1.0-4-g533d7a8",
 			"Rev": "533d7a8dc147b3c9ebc09726c6bc5e32857392cd"

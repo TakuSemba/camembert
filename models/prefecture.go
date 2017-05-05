@@ -5,6 +5,7 @@ import "gopkg.in/mgo.v2/bson"
 type Prefecture struct {
 	Id       int         `json:"id"`
 	Name     string      `json:"name"`
+	Romaji   string      `json:"romaji"`
 }
 
 func GetPrefectures() (prefectures []Prefecture, err error) {

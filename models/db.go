@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	IP_ADDRESS = "172.17.0.2"
+	IP_ADDRESS = "172.17.0.3"
 	Localhost = "127.0.0.1"
 	DB = "camembert"
 	PREFECTURES = "prefectures"
@@ -21,7 +21,7 @@ func GetSession() (session Session) {
 	var err error
 	var s *mgo.Session
 
-	s, err = mgo.Dial(Localhost)
+	s, err = mgo.Dial(IP_ADDRESS)
 
 	session = Session{s}
 	if err != nil {

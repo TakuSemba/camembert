@@ -8,11 +8,15 @@ import (
 
 func DefineRoutes(e *echo.Echo) {
 
-	api := e.Group("/v1")
-
-	api.GET("/", func(c echo.Context) error {
+	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World!")
 	})
-	api.GET("/prefectures", services.GetJsonPrefectures)
+
+
+	v1 := e.Group("/v1")
+	v1.GET("/prefectures", services.GetJsonPrefectures)
+
+	v2 := e.Group("/v2")
+	v2.GET("/prefectures", services.GetBinaryPrefectures)
 
 }
