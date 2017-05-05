@@ -21,7 +21,7 @@ func GetSession() (session Session) {
 	var err error
 	var s *mgo.Session
 
-	s, err = mgo.Dial(IP_ADDRESS)
+	s, err = mgo.Dial(Localhost)
 
 	session = Session{s}
 	if err != nil {

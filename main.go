@@ -16,5 +16,5 @@ func main() {
 	}))
 
 	routes.DefineRoutes(e)
-	e.Start(":80")
+	e.Start(":8001")
 }

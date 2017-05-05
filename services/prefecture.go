@@ -3,8 +3,9 @@ package services
 import (
 	"github.com/labstack/echo"
 	"net/http"
+	proto1 "github.com/golang/protobuf/proto"
 	"github.com/TakuSemba/camembert/models"
-	"github.com/TakuSemba/camembert/proto"
+	"github.com/TakuSemba/camembert/conv"
 )
 
 func GetJsonPrefectures(c echo.Context) error {
@@ -18,17 +19,8 @@ func GetBinaryPrefectures(c echo.Context) error {
 
 	prefectures, _ := models.GetPrefectures()
 
-	response := []models.Prefecture{}
+	res := conv.ToGetPrefecturesResponse(prefectures)
+	data, _ := proto1.Marshal(&res)
 
-	for _, prefecture := range prefectures {
-		prefectureProto := proto.Prefecture{
-			Id:        prefecture.Id,
-			Name:      prefecture.Name,
-			Romaji:   prefecture.Romaji,
-		}
-		response = append(response, &prefectureProto)
-	}
-
-
-	return c.Blob(http.StatusOK, "application/protobuf", response)
+	return c.Blob(http.StatusOK, "application/protobuf", data)
 }
