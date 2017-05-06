@@ -1,5 +1,5 @@
 # camembert
-API server with protocol buffers
+API server with protocol buffers and json
 
 
 ## prerequisite
