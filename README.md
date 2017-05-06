@@ -77,3 +77,8 @@ docker-compose up
 ```
 
 
+## test
+
+```
+go test services/prefecture_test.go -v
+```
