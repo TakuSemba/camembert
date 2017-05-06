@@ -3,9 +3,9 @@ package models
 import "gopkg.in/mgo.v2/bson"
 
 type Prefecture struct {
-	Id       int         `json:"id"`
-	Name     string      `json:"name"`
-	Romaji   string      `json:"romaji"`
+	Id       int         `json:"id"        bson:"_id"`
+	Name     string      `json:"name"      bson:"name"`
+	Romaji   string      `json:"romaji"    bson:"romaji"`
 }
 
 type Prefectures struct {
