@@ -10,6 +10,46 @@ API server with protocol buffers
 
 ・Go
 
+## API 
+
+|API|Description　　　　|Method|Path|
+|:-|:-|:-|:-|
+|**Prefecture**|
+|json API|都道府県の取得|GET|`/v1/prefectures`|
+|protocol buffers API|都道府県の取得|GET|`/v2/prefectures`|
+
+#### json response
+
+```
+{
+	"prefectures": [
+		{
+			"id": 0,
+			"name": "北海道",
+			"romaji": "hokkaido"
+		},
+		{
+			"id": 0,
+			"name": "青森県",
+			"romaji": "aomori"
+		},
+
+		...
+
+		{
+			"id": 0,
+			"name": "鹿児島県",
+			"romaji": "kagoshima"
+		},
+		{
+			"id": 0,
+			"name": "沖縄県",
+			"romaji": "okinawa"
+		}
+	]
+}
+```
+
 
 ## how to start locally
 
