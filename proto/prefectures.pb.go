@@ -22,7 +22,7 @@ type Prefecture struct {
 func (m *Prefecture) Reset()                    { *m = Prefecture{} }
 func (m *Prefecture) String() string            { return proto1.CompactTextString(m) }
 func (*Prefecture) ProtoMessage()               {}
-func (*Prefecture) Descriptor() ([]byte, []int) { return fileDescriptor1, []int{0} }
+func (*Prefecture) Descriptor() ([]byte, []int) { return fileDescriptor2, []int{0} }
 
 func (m *Prefecture) GetId() int64 {
 	if m != nil {
@@ -52,7 +52,7 @@ type GetPrefecturesResponse struct {
 func (m *GetPrefecturesResponse) Reset()                    { *m = GetPrefecturesResponse{} }
 func (m *GetPrefecturesResponse) String() string            { return proto1.CompactTextString(m) }
 func (*GetPrefecturesResponse) ProtoMessage()               {}
-func (*GetPrefecturesResponse) Descriptor() ([]byte, []int) { return fileDescriptor1, []int{1} }
+func (*GetPrefecturesResponse) Descriptor() ([]byte, []int) { return fileDescriptor2, []int{1} }
 
 func (m *GetPrefecturesResponse) GetPrefectures() []*Prefecture {
 	if m != nil {
@@ -66,9 +66,9 @@ func init() {
 	proto1.RegisterType((*GetPrefecturesResponse)(nil), "prefectures.GetPrefecturesResponse")
 }
 
-func init() { proto1.RegisterFile("prefectures.proto", fileDescriptor1) }
+func init() { proto1.RegisterFile("prefectures.proto", fileDescriptor2) }
 
-var fileDescriptor1 = []byte{
+var fileDescriptor2 = []byte{
 	// 181 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x12, 0x2c, 0x28, 0x4a, 0x4d,
 	0x4b, 0x4d, 0x2e, 0x29, 0x2d, 0x4a, 0x2d, 0xd6, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0xe2, 0x46,

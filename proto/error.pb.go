@@ -7,10 +7,13 @@ Package proto is a generated protocol buffer package.
 
 It is generated from these files:
 	error.proto
+	members.proto
 	prefectures.proto
 
 It has these top-level messages:
 	ErrorResult
+	Member
+	GetMembersResponse
 	Prefecture
 	GetPrefecturesResponse
 */

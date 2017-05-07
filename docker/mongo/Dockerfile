@@ -1,4 +1,4 @@
-FROM mongo:3.0
+FROM mongo:3.4.4
 
 ADD . $GOPATH/src/github.com/TakuSemba/camembert/docker/mongo
 

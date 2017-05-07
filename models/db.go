@@ -9,12 +9,11 @@ const (
 	Localhost = "127.0.0.1"
 	DB = "camembert"
 	PREFECTURES = "prefectures"
+	MEMBERS = "members"
 )
 
 type (
-	Session struct {
-		*mgo.Session
-	}
+	Session struct {*mgo.Session}
 )
 
 func GetSession() (session Session) {
@@ -34,3 +33,9 @@ func (s *Session) Prefectures() (c *mgo.Collection){
 	c = s.DB(DB).C(PREFECTURES)
 	return
 }
+
+func (s *Session) Members() (c *mgo.Collection){
+	c = s.DB(DB).C(MEMBERS)
+	return
+}
+
