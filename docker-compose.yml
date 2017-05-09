@@ -11,8 +11,14 @@ mongo:
   build: docker/mongo/.
   command: mongod --smallfiles --quiet --logpath=/dev/null --dbpath=/data/db
 
-mongo-seed:
-  container_name: camembert_mongo_seed
-  build: docker/mongo-seed/.
+mongo-seed-prefecture:
+  container_name: camembert_mongo_seed_prefecture
+  build: docker/mongo-seed-prefecture/.
+  links:
+    - mongo
+
+mongo-seed-member:
+  container_name: camembert_mongo_seed_member
+  build: docker/mongo-seed-member/.
   links:
     - mongo
